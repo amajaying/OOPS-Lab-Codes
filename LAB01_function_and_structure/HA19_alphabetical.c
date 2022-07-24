@@ -1,14 +1,13 @@
 // 9)Write a program to read the name, address,and salary of 5 employees using array of structure.Display information of each employee in alphabetical order of their name.
+
 #include<stdio.h>
 #include<string.h>
-
 struct emp
 {
     char name[20];
     char addr[20];
     int salary;
 }e[5];
-
 typedef struct emp a;
 int sort(){
     a temp;
@@ -22,7 +21,6 @@ int sort(){
         }
     }
 }
-
 int main(){
 
     for (int i = 0; i < 5; i++)
@@ -35,7 +33,6 @@ int main(){
         scanf(" %d", &e[i].salary);
     }
     sort();
-
     for(int i=0; i<5; i++){
         printf("Name: %s\nAddress: %s\nSalary: %d\n\n", e[i].name, e[i].addr, e[i].salary);
     }

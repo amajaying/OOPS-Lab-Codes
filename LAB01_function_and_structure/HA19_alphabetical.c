@@ -8,6 +8,8 @@ struct emp
     char addr[20];
     int salary;
 }e[5];
+
+
 typedef struct emp a;
 int sort(){
     a temp;
@@ -21,6 +23,7 @@ int sort(){
         }
     }
 }
+        
 int main(){
 
     for (int i = 0; i < 5; i++)

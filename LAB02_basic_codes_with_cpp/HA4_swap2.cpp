@@ -1,4 +1,5 @@
-// call by reference
+// swap by address
+// call by address
 
 #include<iostream>
 using namespace std;

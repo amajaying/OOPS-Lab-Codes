@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     int n;
-    cout<<"Enter the number: ";
+    cout<<"Enter the no of elements: ";
     cin>>n;
     int a=0,b=1,c;
     cout<<a<<" "<<b<<" ";

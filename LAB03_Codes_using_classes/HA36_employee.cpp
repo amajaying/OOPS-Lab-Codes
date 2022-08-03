@@ -28,11 +28,12 @@ class Employee{
     }
 
     void display(){
-            cout<<"Id: "<<id<<endl;
-            cout<<"Name: "<<name<<endl;
-            cout<<"Age: "<<age<<endl;
-            cout<<"Basic Salary: "<<basicSal<<endl;
-            cout<<"Gross Salary: "<<gross<<endl<<endl;
+            // cout<<"Id: "<<id;
+            // cout<<"Name: "<<name;
+            // cout<<"Age: "<<age<<endl;
+            // cout<<"Basic Salary: "<<basicSal<<endl;
+            // cout<<"Gross Salary: "<<gross<<endl<<endl;
+            cout<<id<<"\t"<<name<<"\t"<<age<<"\t"<<basicSal<<"\t\t"<<gross<<endl;
     }
 };
 
@@ -46,6 +47,8 @@ int main(){
         abc[i].calc();
     }
     cout<<endl<<"The details of employees are: "<<endl;
+    cout<<"Id\tName\tAge\tBasic Sal\tGross Sal"<<endl;
+
     for(int i=0; i<n; i++){
         abc[i].display();
     }

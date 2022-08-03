@@ -9,7 +9,10 @@ class Complex{
     void takeInput(){
         cout << "Enter real part followed by imaginary (10 numbers): ";
         for(int i=0; i<n; i++){
-            cin>>real[i]>>imaginary[i];
+            cout<<"Enter real part of complex number "<<i+1<<": ";
+            cin>>real[i];
+            cout<<"Enter imaginary part of complex number "<<i+1<<": ";
+            cin>>imaginary[i];
         }
     }
 

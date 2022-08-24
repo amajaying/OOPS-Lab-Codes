@@ -15,7 +15,27 @@ class Rational{
         cout<<"Enter denominator of 2nd num: ";
         cin>>den2;
     }
-
+    int lcm()
+    {
+        int value;
+        if (den1 > den2)
+        {
+            value = den1;
+        }
+        else
+        {
+            value = den2;
+        }
+        while (true)
+        {
+            if (value % den1 == 0 && value % den2 == 0)
+            {
+                return value;
+                break;
+            }
+            value++;
+        }
+    }
     void sum(){
         int nans=0;
         int dans=0;
@@ -24,8 +44,8 @@ class Rational{
             nans = num1+num2;
         }
         else{
-            dans = den1*den2;
-            nans = num1*den2 + num2*den1;
+            dans = lcm();
+            nans = (num1 * (dans / den1)) + (num2 * (dans / den2));
         }
         cout<<"Sum is: "<< nans<<"/"<<dans<<endl;
     }
@@ -35,11 +55,11 @@ class Rational{
         int dans=0;
         if(den1==den2){
             dans = den1;
-            nans = num1+num2;
+            nans = num1-num2;
         }
         else{
-            dans = den1*den2;
-            nans = num1*den2 - num2*den1;
+            dans = lcm();
+            nans = (num1 * (dans / den1)) - (num2 * (dans / den1));
         }
         cout<<"Diff is: "<< nans<<"/"<<dans<<endl;
     }
@@ -67,4 +87,6 @@ int main(){
     r.diff();
     r.prod();
     r.div();
+
+    return 0;
 }

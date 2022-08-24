@@ -1,12 +1,10 @@
 #include <iostream>
 using namespace std;
-
 class Calculate{
     public:
     int feet;
     int inches;
     int result;
-
     void takeInput(){
         cout<<"Enter distance: "<<endl;
         cout<<"In feet: ";
@@ -14,7 +12,6 @@ class Calculate{
         cout<<"In inches: ";
         cin>>inches;
     }
-
     void calc(Calculate x, Calculate y){
         feet = x.feet + y.feet;
         inches = x.inches + y.inches;
@@ -23,11 +20,11 @@ class Calculate{
             inches-=12;
         } 
     }
-
     void display(){
         cout<<"The sum is: "<<feet<<"feet "<<inches<<"inch"<<endl;
     }
 };
+
 int main(){
     Calculate a,b,c;
     a.takeInput();

@@ -1,12 +1,10 @@
 #include <iostream>
 using namespace std;
-
 class Student{
     public:
     string name;
     int roll;
     int totalMarks;
-
     void getInput(){
         cout<<"Enter the name: ";
         getline(cin,name);
@@ -23,11 +21,8 @@ class Student{
         cout<<"Total Marks: "<<totalMarks<<endl<<endl;
     }
 };
-
-
 int main(){
     Student ajay;
     ajay.getInput();
     ajay.display();
-
 }

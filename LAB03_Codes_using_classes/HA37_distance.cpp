@@ -19,7 +19,6 @@ class Distance{
             cout<<"Distance between ("<<x1<<","<<y1<<") and ("<<x2<<","<<y2<<") is: "<<(sqrt(pow(x2-x1,2)+pow(y2-y1,2)))<<endl;
         }
 };
-
 int main(){
 
     Distance dis;

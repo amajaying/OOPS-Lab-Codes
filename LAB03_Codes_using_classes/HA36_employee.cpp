@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class Employee{
     public:
     int id;
@@ -8,7 +7,6 @@ class Employee{
     int age;
     int basicSal;
     int gross;
-
     void takeInput(){
             cout<<"Enter details of employee:"<<endl;
             cout<<"Enter id: ";
@@ -22,21 +20,13 @@ class Employee{
             cin>>basicSal;
             cout<<endl;
     }
-
     void calc(){
             gross = basicSal + (0.8*basicSal) + (0.1*basicSal);
     }
-
     void display(){
-            // cout<<"Id: "<<id;
-            // cout<<"Name: "<<name;
-            // cout<<"Age: "<<age<<endl;
-            // cout<<"Basic Salary: "<<basicSal<<endl;
-            // cout<<"Gross Salary: "<<gross<<endl<<endl;
             cout<<id<<"\t"<<name<<"\t"<<age<<"\t"<<basicSal<<"\t\t"<<gross<<endl;
     }
 };
-
 int main(){
     int n;
     cout << "Enter the no of employees: ";
@@ -47,7 +37,7 @@ int main(){
         abc[i].calc();
     }
     cout<<endl<<"The details of employees are: "<<endl;
-    cout<<"Id\tName\tAge\tBasic Sal\tGross Sal"<<endl;
+    cout<<"Id\tName\t\tAge\tBasic Sal\tGross Sal"<<endl;
 
     for(int i=0; i<n; i++){
         abc[i].display();

@@ -23,5 +23,5 @@ class Area{
 int main(){
     Area a;
     a.setDim(a.length, a.breadth);
-    cout<<"The area of triangle is: " << a.getArea()<<endl;
+    cout<<"The area of rectangle is: " << a.getArea()<<endl;
 }

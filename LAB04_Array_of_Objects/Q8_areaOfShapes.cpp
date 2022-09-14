@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-const float pi = 22 / 7;
+const float pi = 22/7.0;
 
 
 class Area
@@ -9,7 +9,7 @@ class Area
 public:
     void area(float r)
     {
-        float pi = 3.14285;
+        // float pi = 3.14285;
         float a = pi * r * r;
         cout<<"Area of circle = "<<a<<endl;
     }

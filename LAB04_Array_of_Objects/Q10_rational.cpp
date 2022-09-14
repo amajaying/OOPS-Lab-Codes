@@ -59,7 +59,7 @@ class Rational{
         }
         else{
             dans = lcm();
-            nans = (num1 * (dans / den1)) - (num2 * (dans / den1));
+            nans = (num1 * (dans / den1)) - (num2 * (dans / den2));
         }
         cout<<"Diff is: "<< nans<<"/"<<dans<<endl;
     }

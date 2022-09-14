@@ -16,7 +16,7 @@ class Sports: public Student{
     Sports(){
         cout<<"Enter marks in Sports: ";
         cin>>sportsMarks;
-        cout<<"Marks in Sports: "<<sportsMarks<<endl;
+        // cout<<"Marks in Sports: "<<sportsMarks<<endl;
         total = total + sportsMarks;
     }
 };

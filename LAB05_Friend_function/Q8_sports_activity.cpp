@@ -6,8 +6,19 @@ class Student{
     
     int roll; 
     int age;
+    int sportsMarks;
     int total;
     float percent;
+};
+
+class Sports: public Student{
+    public:
+    Sports(){
+        cout<<"Enter marks in Sports: ";
+        cin>>sportsMarks;
+        cout<<"Marks in Sports: "<<sportsMarks<<endl;
+        total = total + sportsMarks;
+    }
 };
 
 class test:public Student{
@@ -37,7 +48,9 @@ class test:public Student{
         cout<<"5 Marks are: "<<endl;
         for(int i=0; i<5; i++)
             cout<<marks[i]<<"\t";
+
         cout<<endl;
+
         cout<<"Total: "<<total<<endl;
         cout<<"Percentage: "<<percent<<endl;
     }
@@ -47,6 +60,7 @@ class test:public Student{
 int main(){
     test t;
     t.input();
+    Sports s;
     cout<<endl<<"The details of student are: "<<endl;
     t.display();
     return 0;

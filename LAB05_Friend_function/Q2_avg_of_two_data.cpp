@@ -2,20 +2,35 @@
 
 #include<iostream>
 using namespace std;
-class A{
-    int a;
+class A
+{
+    private:
+        int num1;
     public:
-    friend void average(A,B);
+        A()
+        {
+            cout<<"Enter the value of num1: ";
+            cin>>num1;
+
+        }
+        friend void avg(A *num1, B *num2);
+};
+class B
+{
+    private:
+        int num2;
+    public:
+        B()
+        {
+            cout<<"Enter the value of num2: ";
+            cin>>num2;
+        }
+        
+        friend void avg(A *num1, B *num2);
 };
 
-class B{
-    int b;
-    public:
-    friend void average(A,B);
-};
-
-void average(A a, B b){
-    cout<<"Average of "<<"&"<<b.b<<"is "<< (b.b)/2;
+void avg(A *num1, B *num2){
+    cout<<"Average is: "<< num1->
 }
 
 

@@ -1,11 +1,11 @@
-// wap to find the average of the private data members of two different classes using friend function.
-
-#include<iostream>
+#include <iostream>
 using namespace std;
+
+class B;
 class A
 {
     private:
-        int num1;
+        float num1;
     public:
         A()
         {
@@ -13,24 +13,40 @@ class A
             cin>>num1;
 
         }
-        friend void avg(A *num1, B *num2);
+        void show()
+        {
+                cout<<"\n Value of Number 1 : "<<num1;
+        }
+        friend void average(A *num1, B *num2);
 };
 class B
 {
     private:
-        int num2;
+        float num2;
     public:
         B()
         {
             cout<<"Enter the value of num2: ";
             cin>>num2;
         }
-        
-        friend void avg(A *num1, B *num2);
+        void show()
+        {
+                cout<<"\n Value of Number 2 : "<<num2;
+        }
+        friend void average(A *num1, B *num2);
 };
 
-void avg(A *num1, B *num2){
-    cout<<"Average is: "<< num1->
+void average(A *a, B *b)
+{
+        float no3;
+        no3=(a->num1+b->num2)/2;
+        cout<<"Average of the two numbers is: "<<no3<<endl;
 }
 
-
+int main()
+{
+        A b;
+        B d;
+        average(&b, &d);
+        return 0;
+}

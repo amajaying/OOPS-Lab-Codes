@@ -16,13 +16,13 @@ using namespace std;
 class Account{
     private:
     int account_no;
-    char name[20];
+    string name;
      public:
     float balance;
    
-    Account(int a, char *n, float b){
+    Account(int a, string n, float b){
         account_no = a;
-        strcpy(name, n);
+        n = name;
         balance = b;
     }
     void deposit(float amount){
@@ -40,7 +40,7 @@ class Savings: public Account{
     private:
     float min_balance;
     public:
-    Savings(int a, char *n, float b, float m): Account(a, n, b){
+    Savings(int a, string n, float b, float m): Account(a, n, b){
         min_balance = m;
     }
     void withdraw(float amount){
@@ -58,7 +58,7 @@ class Current: public Account{
     private:
     float overdue_amount;
     public:
-    Current(int a, char *n, float b, float o): Account(a, n, b){
+    Current(int a, string n, float b, float o): Account(a, n, b){
         overdue_amount = o;
     }
     void withdraw(float amount){
@@ -73,10 +73,8 @@ class Current: public Account{
 };
 
 int main(){
-    char name[20] = "Ajay";
-    char name2[20] = "Bipin";
-    Savings s(1, name, 1200, 500);
-    Current c(2, name2, 1900, 500);
+    Savings s(1, "Ajay", 1200, 500);
+    Current c(2, "Bipin", 1900, 500);
     s.deposit(1800);
     c.deposit(4300);
     s.withdraw(1700);

@@ -2,17 +2,16 @@
 // Extend the program ii. of inheritance to include a class sports, which stores the marks in sports activity. Derive the result class from the classes ‘test’ and ‘sports’. Create objects using parameterized constructors .Calculate the total marks and percentage of a student.
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 class student{
     private:
-    char name[20];
+    string name;
     int roll_no;
     int age;
     public:
-    student(char *n, int r, int a){
-        strcpy(name, n);
+    student(string n, int r, int a){
+        n = name;
         roll_no = r;
         age = a;
     }
@@ -22,7 +21,7 @@ class test: public student{
     private:
     int mark[5];
     public:
-    test(char *n, int r, int a, int marks[]): student(n, r, a){
+    test(string n, int r, int a, int marks[]): student(n, r, a){
         for(int i=0; i<5; i++){
             mark[i] = marks[i]; 
         }
@@ -43,7 +42,7 @@ class result: public test, public sports{
     int total_marks;
     float percentage;
     public:
-    result(char *n, int r, int a, int marks[], int m): test(n, r, a, marks), sports(m){
+    result(string n, int r, int a, int marks[], int m): test(n, r, a, marks), sports(m){
         total_marks = 0;
         for(int i=0; i<5; i++){
             total_marks += marks[i];
@@ -58,7 +57,7 @@ class result: public test, public sports{
 };
 
 int main(){
-    char name[20];
+    string name;
     int roll_no, age, marks[5], m;
     cout<<"Enter name: ";
     cin>>name;

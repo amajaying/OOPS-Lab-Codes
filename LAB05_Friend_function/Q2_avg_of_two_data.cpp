@@ -13,10 +13,6 @@ class A
             cin>>num1;
 
         }
-        void show()
-        {
-                cout<<"\n Value of Number 1 : "<<num1;
-        }
         friend void average(A *num1, B *num2);
 };
 class B
@@ -28,10 +24,6 @@ class B
         {
             cout<<"Enter the value of num2: ";
             cin>>num2;
-        }
-        void show()
-        {
-                cout<<"\n Value of Number 2 : "<<num2;
         }
         friend void average(A *num1, B *num2);
 };

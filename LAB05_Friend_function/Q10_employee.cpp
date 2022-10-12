@@ -30,7 +30,7 @@ public:
         cin >> HRA;
         cout << "Enter the basic salary of the employee: ";
         cin >> basic;
-        total=salary+DA+HRA+basic;
+        total = salary + DA + HRA + basic;
     }
     void display()
     {
@@ -63,7 +63,7 @@ public:
         cin >> hours;
         cout << "Enter the pay per hour of the employee: ";
         cin >> pay;
-        total=salary+(hours*pay);
+        total = salary + (hours * pay);
     }
     void display()
     {
@@ -80,9 +80,9 @@ int main()
 {
     Regular r;
     PartTime p;
-    cout<<"Regular employee details: "<<endl;
+    cout << "Regular employee details: " << endl;
     r.getdata();
-    cout<<"Part time employee details: "<<endl;
+    cout << "Part time employee details: " << endl;
     p.getdata();
     r.display();
     p.display();

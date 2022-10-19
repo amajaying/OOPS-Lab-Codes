@@ -42,7 +42,7 @@ class Complex{
 
 int main(){
     Complex c1(10,20),c2(30,40),c3;
-    c3=c1+c2;
+    c3=c1+c2; // adding two objects
     c3.display();
     c3=++c1; // pre increment
     c3.display();

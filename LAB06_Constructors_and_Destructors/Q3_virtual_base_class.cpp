@@ -1,41 +1,53 @@
-// WAP to demonstrate the order of call of constructors and destructors in case of virtual
-// base class .
+// WAP to demonstrate the order of call of constructors and destructors in case of virtual base class .
 #include<iostream>
 using namespace std;
+
 
 class A{
     public:
     A(){
-        cout<<"Class A Constructor called."<<endl;
+        cout<<"First Base Constructor called."<<endl;
     }
 
     ~A(){
-        cout<<"Class A Destructor called."<<endl;
+        cout<<"First Base Destructor called."<<endl;
     }
 };
 
 class B: virtual public A{
     public:
     B(){
-        cout<<"Class B Constructor called."<<endl;
+        cout<<"Second Base Constructor called."<<endl;
     }
     ~B(){
-        cout<<"Class B Destructor called."<<endl;
+        cout<<"Second Base Destructor called."<<endl;
     }
 };
 
-class C: public B{
+class C: virtual public A{
     public:
     C(){
-        cout<<"Class C Constructor called."<<endl;
+        cout<<"Third Base Constructor called."<<endl;
     }
     ~C(){
-        cout<<"Class C Destructor called."<<endl;
+        cout<<"Third Base Destructor called."<<endl;
     }
 };
+
+class D: public B, public C{
+    public:
+    D(){
+        cout<<"Derived Constructor called."<<endl;
+    }
+    ~D(){
+        cout<<"Derived Destructor called."<<endl;
+    }
+};
+
 int main(){
-    C obj;
+    D obj;
     return 0;
 }
+
 
 

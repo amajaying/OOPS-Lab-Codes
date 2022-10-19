@@ -36,6 +36,7 @@ class C: public B{
 
 int main(){
     C obj;
+    cout<<"haha";
     return 0;
 }
 

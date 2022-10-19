@@ -46,7 +46,7 @@ int main(){
     c3.display();
     c3=++c1; // pre increment
     c3.display();
-    c3=c1++; //post increment
+    c3=c2++; //post increment
     c3.display();
     return 0;
 }

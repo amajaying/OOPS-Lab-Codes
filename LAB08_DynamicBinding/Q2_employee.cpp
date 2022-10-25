@@ -21,11 +21,11 @@ class Employee{
 class Regular: public Employee{
     float da, hra, basic;
     public:
-    void gData(string name, int id, float salary, float da, float hra, float basic){
+    void gData(string name, int id, float salary, float d, float h, float b){
         Employee::getData(name, id, salary);
-        da = da;
-        hra = hra;
-        basic = basic;
+        da = d;
+        hra = h;
+        basic = b;
     }
     void calculateSalary(){
         salary = da + hra + basic;
@@ -41,10 +41,10 @@ class PartTime: public Employee{
     int hours;
     float payPerHour;
     public:
-    void gData(string name, int id, float salary, int hours, float payPerHour){
+    void gData(string name, int id, float salary, int h, float pph){
         Employee::getData(name, id, salary);
-        hours = hours;
-        payPerHour = payPerHour;
+        hours = h;
+        payPerHour = pph;
     }
     void calculateSalary(){
         salary = hours * payPerHour;
@@ -60,7 +60,7 @@ int main(){
     Regular r;
     PartTime p;
     r.gData("Ajay", 1, 0, 1000, 2000, 3000);
-    p.gData("Unik", 1, 0, 10, 100);
+    p.gData("Unik", 3, 0, 10, 100);
     r.calculateSalary();
     p.calculateSalary();
     r.display();

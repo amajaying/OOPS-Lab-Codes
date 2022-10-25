@@ -15,9 +15,9 @@ class Circle: public Shape{
     float ar, pi;
     int r;
     public:
-    void getData(int r, float pi){
-        r=r;
-        pi = pi;
+    void getData(int r1, float pi1){
+        r=r1;
+        pi = pi1;
     }
     void area(){
         ar = pi * r * r;
@@ -31,8 +31,8 @@ class Square: public Shape{
     int ar;
     int l;
     public:
-    void getData(int l){
-        l = l;
+    void getData(int l1){
+        l = l1;
     }
     void area(){
         ar = l*l;

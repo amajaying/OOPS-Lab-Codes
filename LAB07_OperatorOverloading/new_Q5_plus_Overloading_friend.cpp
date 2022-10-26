@@ -1,4 +1,4 @@
-// WAP to overload arithmetic plus(+) operator for adding two complex numbers using friend function and member function.
+// WAP to overload arithmetic plus(+) operator for adding two complex numbers using friend function.
 
 #include <iostream>
 using namespace std;

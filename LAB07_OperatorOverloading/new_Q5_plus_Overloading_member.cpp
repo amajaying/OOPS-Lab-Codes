@@ -30,7 +30,6 @@ int main()
 {
     Complex c1(10, 5), c2(2, 4), c3;
     c3 = c1 + c2;
-    ;
     c1.display();
     c2.display();
     c3.display();

@@ -22,12 +22,12 @@ Number operator-(Number n){
 
 int main(){
     Number n1(10), n2(-20);
-    cout<<"Before Overloading";
+    cout<<"Before Overloading"<<endl;
     n1.display();
     n2.display();
     n1 = -n1;
     n2 = -n2;
-    cout<<"After Overloading";
+    cout<<"After Overloading"<<endl;
     n1.display();
     n2.display();
     return 0;

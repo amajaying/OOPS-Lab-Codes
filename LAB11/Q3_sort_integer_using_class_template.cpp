@@ -38,3 +38,15 @@ class Sort
         cout<<endl;
     }
 };
+
+int main(){
+    Sort<int> s1;
+    Sort<float> s2;
+    s1.getdata();
+    s1.sort();
+    s1.display();
+    s2.getdata();
+    s2.sort();
+    s2.display();
+    return 0;
+}

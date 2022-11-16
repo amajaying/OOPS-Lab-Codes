@@ -16,7 +16,7 @@ int main(){
         }
         cout<<data<<endl;
         for(int i=0;data[i]!='\0';i++){
-            if(data[i]==' '){
+            if(data[i]==' '){  //hello gn
                 blank++;
             }
             else if(data[i]=='\t'){
